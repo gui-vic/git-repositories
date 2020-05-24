@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700&display=swap");
+@keyframes fade {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0.5);
+    opacity:0;
+  }
+ 100% {
+    transform: scale(1);
+    opacity:1;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: rgb(35, 37, 38);
+  background: linear-gradient(
+    90deg,
+    rgba(35, 37, 38, 1) 0%,
+    rgba(65, 67, 69, 1) 50%,
+    rgba(35, 37, 38, 1) 99%
+  );
+  text-align: center;
+}
+h1{
+  color:white;
+  animation: 0.5s ease-in-out 0s 1 fade;
+}
+#app {
+  display: block;
+  margin: auto;
+  width: auto;
+}
+input {
+  display: block;
+  margin: 25px auto;
+  background: none;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  width: 150px;
+  height: 15px;
+  transition: all 0.5s ease-in-out;
+  animation-name: zoom;
+  animation-duration: 1s;
+}
+input:focus {
+  outline: 0;
+  width: 250px;
+  height: 20px;
+}
+button {
+  display: block;
+  margin: auto;
+  background: white;
+  border-radius: 25px;
+  border: 2px solid white;
+  
+  padding: 5px;
+  width: 95px;
+  font-family: "Roboto", sans-serif;
+  color: rgba(65, 67, 69, 1) 50%;
+  transition: all 0.3s ease-in-out;
+  animation-name: zoom;
+  animation-duration: 1s;
+}
+button:hover {
+  background: transparent;
+  border: 2px solid;
+  color: white;
+  width: 130px;
+}
+button:focus {
+  outline: 0;
+}
+ul {
+  list-style: none;
+  color: white;
+  margin: 25px auto;
+  display: block;
+  height: auto;
+  width: 270px;
+}
+li {
+  display: table;
+  position: relative;
+  left: -7%;
+  margin: auto;
+  padding: 2px;
+  animation: 0.5s ease-in-out 0s 1 fade;
+}
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+a:hover {
+  color: gray;
+}
